@@ -27,7 +27,6 @@
 
 <script>
 export default {
-  layout: 'login_register',
   middleware: 'auth',
 }
 </script>

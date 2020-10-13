@@ -16,8 +16,8 @@
       </div>
 
       <div v-else>
-        <v-btn class="ma-2"> LOGIN </v-btn>
-        <v-btn class="ma-2"> REGISTER </v-btn>
+        <v-btn nuxt to="/login" class="ma-2"> LOGIN </v-btn>
+        <v-btn nuxt to="/registration" class="ma-2"> REGISTER </v-btn>
       </div>
     </v-app-bar>
 

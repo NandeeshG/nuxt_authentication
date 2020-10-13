@@ -1,5 +1,10 @@
 # nuxt-authentication
 
+## Todos -
+
+1. Make layouts instead of every page having same HTML
+2. Add pages in left side navbar
+
 ## Build Setup
 
 ```bash

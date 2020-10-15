@@ -1,32 +1,41 @@
 <template>
-  <h1>Hi</h1>
+  <v-app>
+    <v-navigation-drawer class="blue" app>
+      Populate Navigation drawer for multiple pages later
+    </v-navigation-drawer>
+
+    <v-app-bar class="grey" app>
+      <v-avatar class="mr-4" color="blue" size="45"></v-avatar>
+      <div v-if="$auth.loggedIn === true">Greetings, {{ $auth.user }}.</div>
+      <div v-else>Welcome guest.</div>
+
+      <v-spacer />
+
+      <div v-if="$auth.loggedIn === true">
+        <v-btn class="ma-2"> LOGOUT </v-btn>
+      </div>
+
+      <div v-else>
+        <v-btn nuxt to="/login" class="ma-2"> LOGIN </v-btn>
+        <v-btn nuxt to="/registration" class="ma-2"> REGISTER </v-btn>
+      </div>
+    </v-app-bar>
+
+    <!-- Sizes your content based upon application components -->
+    <v-main class="white">
+      <v-container fluid>
+        THIS PAGE IS FOR EVERYONE ON THE NET
+        <br />
+        <nuxt-link to="/userOnly"> Go to registered user's section. </nuxt-link>
+      </v-container>
+    </v-main>
+
+    <v-footer class="grey" app> Vue | Nuxt | Vuetify | Auth </v-footer>
+  </v-app>
 </template>
 
 <script>
-const http = require('http')
-
-export default {
-  data() {
-    return {
-      name: 'user',
-    }
-  },
-  mounted() {
-    console.log('Before req')
-    http.get('http://127.0.0.1:5000/1', (res) => console.log(res))
-    console.log('After req')
-  },
-}
+export default {}
 </script>
 
-<style>
-body {
-  background-color: gray;
-}
-h1 {
-  text-align: center;
-  font-size: 60px;
-  background-color: brown;
-  color: white;
-}
-</style>
+<style></style>

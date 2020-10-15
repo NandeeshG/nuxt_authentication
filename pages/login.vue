@@ -1,14 +1,22 @@
 <template>
   <v-app>
     <v-app-bar class="grey" app> THIS IS LOGIN PAGE </v-app-bar>
-    <v-main class="white">
+    <v-main class="grey">
       <v-container fluid>
         Please login before continuing
         <br />
         <nuxt-link to="/"> Go back to home. </nuxt-link>
         <form @submit="userLogin">
-          <div><label>Username</label> <input v-model="login.username" /></div>
-          <div><label>Password</label> <input v-model="login.password" /></div>
+          <br />
+          <div>
+            <label>Username </label>
+            <input v-model="login.username" class="white" />
+          </div>
+          <br />
+          <div>
+            <label>Password</label>
+            <input v-model="login.password" class="white" />
+          </div>
           <v-btn type="submit" class="ma-2 green"> LOGIN NOW! </v-btn>
         </form>
         <br />
@@ -34,7 +42,7 @@ export default {
     async userLogin() {
       try {
         const response = await this.$auth.loginWith('local', {
-          data: this.login,
+          // data: this.login,
         })
         console.log('res', response)
       } catch (err) {

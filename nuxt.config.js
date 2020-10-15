@@ -54,4 +54,24 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  axios: {
+    baseURL: 'http://127.0.0.1:5000',
+  },
+
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: '/1',
+            method: 'get',
+            propertyName: false,
+          },
+        },
+        tokenRequired: false,
+        tokenType: false,
+      },
+    },
+  },
 }

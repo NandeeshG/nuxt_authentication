@@ -1,14 +1,22 @@
 <template>
   <v-app>
     <v-app-bar class="grey" app> THIS IS REGISTRATION PAGE </v-app-bar>
-    <v-main class="white">
+    <v-main class="cyan">
       <v-container fluid>
         <nuxt-link to="/"> Go back to home. </nuxt-link>
         <br />
         Please enter your details
         <form @submit="userRegister">
-          <div><label>Username</label> <input v-model="login.username" /></div>
-          <div><label>Password</label> <input v-model="login.password" /></div>
+          <br />
+          <div>
+            <label>Username</label>
+            <input v-model="login.username" class="grey" />
+          </div>
+          <br />
+          <div>
+            <label>Password</label>
+            <input v-model="login.password" class="grey" />
+          </div>
           <v-btn type="submit" class="ma-2 green"> REGISTER NOW! </v-btn>
         </form>
       </v-container>

@@ -1,5 +1,8 @@
 # nuxt-authentication
 
+A frontend nuxt application for my backend authentication and data server (https://github.com/NandeeshG/Authentication-and-Data-Server).
+This will be a generalised userlogin based data retrieval and storage system, so that code can be modified as per each future project.
+
 ## Todos -
 
 1. Add axios server configs

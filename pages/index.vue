@@ -1,41 +1,56 @@
 <template>
-  <v-app>
-    <v-navigation-drawer class="blue" app>
-      Populate Navigation drawer for multiple pages later
-    </v-navigation-drawer>
-
-    <v-app-bar class="grey" app>
-      <v-avatar class="mr-4" color="blue" size="45"></v-avatar>
-      <div v-if="$auth.loggedIn === true">Greetings, {{ $auth.user }}.</div>
-      <div v-else>Welcome guest.</div>
+  <v-app class="white">
+    <v-app-bar app class="orange">
+      SERVER CONTROL BUTTONS ->
+      <v-btn class="ma-4"> Reset all data </v-btn>
+      <v-btn class="ma-4"> Reload page </v-btn>
 
       <v-spacer />
 
-      <div v-if="$auth.loggedIn === true">
-        <v-btn class="ma-2"> LOGOUT </v-btn>
-      </div>
-
-      <div v-else>
-        <v-btn nuxt to="/login" class="ma-2"> LOGIN </v-btn>
-        <v-btn nuxt to="/registration" class="ma-2"> REGISTER </v-btn>
-      </div>
+      <h4>Logged In -> USERNAME</h4>
     </v-app-bar>
 
-    <!-- Sizes your content based upon application components -->
     <v-main class="white">
-      <v-container fluid>
-        THIS PAGE IS FOR EVERYONE ON THE NET
-        <br />
-        <nuxt-link to="/userOnly"> Go to registered user's section. </nuxt-link>
+      <v-container class="blue">
+        <div>
+          <h1>Query box</h1>
+          USER COMMANDS ->
+          <v-btn class="ma-4"> Register new user </v-btn>
+          <v-btn class="ma-4"> Login </v-btn>
+          <v-btn class="ma-4"> Add data </v-btn>
+          <v-btn class="ma-4"> See data </v-btn>
+          <br />
+          ADMIN COMMANDS ->
+          <v-btn class="ma-4"> See all registered users </v-btn>
+          <v-btn class="ma-4"> See all users' data </v-btn>
+        </div>
+        <hr />
+        <div>
+          <h1>Output box</h1>
+          <!--<p>{{ output }}</p>-->
+        </div>
       </v-container>
     </v-main>
 
-    <v-footer class="grey" app> Vue | Nuxt | Vuetify | Auth </v-footer>
+    <v-footer app class="green"> Nuxt-Authentication </v-footer>
   </v-app>
 </template>
 
 <script>
-export default {}
+export default {
+  // data() {
+  //   return {
+  //     output: '',
+  //   }
+  // },
+  // methods: {
+  //   async getAllUsers() {
+  //     this.output = await this.$axios.get(
+  //       process.env.SERVER_URL + 'dev/auth/all'
+  //     )
+  //   },
+  // },
+}
 </script>
 
 <style></style>

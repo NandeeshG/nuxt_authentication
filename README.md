@@ -7,12 +7,7 @@
 
 ## Todos -
 
-1. Add axios server configs
-2. Add get,post requests, handle LOGIN, LOGOUT
-3. Add REGISTER request
-4. Make layouts instead of every page having same HTML
-5. Add real content to pages, maybe a alarm/timer app, unique for each user.
-6. Add the pages in left side navbar
+1. Work on adding and fetching data after login logout is done
 
 ## Build Setup
 

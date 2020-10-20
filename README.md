@@ -1,10 +1,15 @@
 # nuxt-authentication
 
+## Latest changes -
+
+1. Added user register/login/logout ability
+2. Added 'SuperUser server clear' and 'Admin all users fetch'
+
 ## Todos -
 
 1. Add axios server configs
 2. Add get,post requests, handle LOGIN, LOGOUT
-3. Add REGISTER request 
+3. Add REGISTER request
 4. Make layouts instead of every page having same HTML
 5. Add real content to pages, maybe a alarm/timer app, unique for each user.
 6. Add the pages in left side navbar

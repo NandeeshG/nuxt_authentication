@@ -1,6 +1,12 @@
 # nuxt-authentication
 
-## Latest changes -
+## Latest changes 21Oct -
+
+1. This branch is just for implementing auth
+2. right now only register, login, logout work
+3. data updation and retrieval from server soon
+
+## Latest changes 20Oct -
 
 1. Added user register/login/logout ability
 2. Added 'SuperUser server clear' and 'Admin all users fetch'

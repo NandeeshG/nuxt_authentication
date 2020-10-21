@@ -31,7 +31,7 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ['@nuxtjs/axios'], //, '@nuxtjs/auth'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/auth'],
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
@@ -59,19 +59,27 @@ export default {
     baseURL: process.env.AUTH_URL,
   },
 
-  // auth: {
-  //   strategies: {
-  //     local: {
-  //       endpoints: {
-  //         login: {
-  //           url: '/1',
-  //           method: 'get',
-  //           propertyName: false,
-  //         },
-  //       },
-  //       tokenRequired: false,
-  //       tokenType: false,
-  //     },
-  //   },
-  // },
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: '/api/auth/login',
+            method: 'post',
+            propertyName: 'accessToken',
+          },
+          logout: { url: '/api/auth/logout', method: 'delete' },
+          user: {
+            url: '/api/auth/user',
+            method: 'get',
+            propertyName: 'user',
+          },
+        },
+        tokenRequired: true,
+        tokenType: 'bearer',
+        globalToken: true,
+        autoFetchUser: true,
+      },
+    },
+  },
 }
